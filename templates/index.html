@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+</head>
+<body>
+    <h1>Calculadora Básica</h1>
+    <form action="/calculate" method="post">
+        <input type="number" name="num1" placeholder="Número 1" required>
+        <select name="operation">
+            <option value="add">+</option>
+            <option value="subtract">-</option>
+            <option value="multiply">*</option>
+            <option value="divide">/</option>
+        </select>
+        <input type="number" name="num2" placeholder="Número 2" required>
+        <button type="submit">Calcular</button>
+    </form>
+
+    {% if result is not none %}
+        <h2>Resultado: {{ result }}</h2>
+        {% if show_message %}
+            <h2>SIUUUUUUU</h2>
+        {% endif %}
+    {% endif %}
+</body>
+</html>
